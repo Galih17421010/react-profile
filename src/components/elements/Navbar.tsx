@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { buttonVariants } from "./ui/button";
-import { Menu } from "lucide-react";
+import { RocketIcon } from "@radix-ui/react-icons";
+import { buttonVariants } from "../ui/button";
+import { Link, Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+import { LogoIcon } from "../Icons";
 
 interface RouteProps {
   href: string;
@@ -15,20 +14,20 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "/features",
-    label: "Features",
+    href: "/about",
+    label: "About",
   },
   {
-    href: "/testimonials",
-    label: "Testimonials",
+    href: "/projects",
+    label: "Projects",
   },
   {
-    href: "/pricing",
-    label: "Pricing",
+    href: "/experience",
+    label: "Experience",
   },
   {
-    href: "/faq",
-    label: "FAQ",
+    href: "/articles",
+    label: "Articles",
   },
 ];
 
@@ -74,8 +73,8 @@ export const Navbar = () => {
                       variant: "secondary",
                     })}`}
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
+                    <RocketIcon className="mr-2 w-5 h-5" />
+                    Contact
                   </a>
                 </nav>
               </SheetContent>
@@ -100,7 +99,7 @@ export const Navbar = () => {
 
           <div className="hidden md:flex gap-2">
             <a rel="noreferrer noopener" href="https://github.com/Galih17421010" target="_blank" className={`border ${buttonVariants({ variant: "secondary" })}`}>
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
+              <RocketIcon className="mr-2 w-5 h-5" />
               Contact
             </a>
 
