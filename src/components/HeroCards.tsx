@@ -70,7 +70,7 @@ export const HeroCards = () => {
 
             <a
               rel="noreferrer noopener"
-              href="https://www.linkedin.com/"
+              href="https://linkedin.com/in/galihagussaputra"
               target="_blank"
               className={buttonVariants({
                 variant: "ghost",

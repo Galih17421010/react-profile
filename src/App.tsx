@@ -32,7 +32,7 @@ function App() {
       <Newsletter />
       <FAQ /> */}
       <Footer />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </>
   );
 }

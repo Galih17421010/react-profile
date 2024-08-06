@@ -15,19 +15,19 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
+    href: "/features",
     label: "Features",
   },
   {
-    href: "#testimonials",
+    href: "/testimonials",
     label: "Testimonials",
   },
   {
-    href: "#pricing",
+    href: "/pricing",
     label: "Pricing",
   },
   {
-    href: "#faq",
+    href: "/faq",
     label: "FAQ",
   },
 ];
@@ -101,7 +101,7 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-2">
             <a rel="noreferrer noopener" href="https://github.com/Galih17421010" target="_blank" className={`border ${buttonVariants({ variant: "secondary" })}`}>
               <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
+              Contact
             </a>
 
             <ModeToggle />
