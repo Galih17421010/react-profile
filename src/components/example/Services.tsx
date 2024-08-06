@@ -1,5 +1,5 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
+import { MagnifierIcon, WalletIcon, ChartIcon } from "../elements/Icons";
 import cubeLeg from "../assets/cube-leg.png";
 
 interface ServiceProps {

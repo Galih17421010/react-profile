@@ -3,7 +3,7 @@ import { Badge } from "../ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Check, Linkedin } from "lucide-react";
-import { LightBulbIcon } from "../Icons";
+import { LightBulbIcon } from "../elements/Icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const HeroCards = () => {

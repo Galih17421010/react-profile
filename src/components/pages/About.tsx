@@ -1,4 +1,4 @@
-import { Statistics } from "../Statistics";
+import { Statistics } from "../elements/Statistics";
 import pilot from "@/assets/pilot.png";
 
 export const About = () => {

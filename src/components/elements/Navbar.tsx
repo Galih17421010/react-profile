@@ -5,37 +5,28 @@ import { RocketIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "../ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "../Icons";
-import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
-import { Link, Route } from "react-router-dom";
-import { Home } from "../pages/Home";
-import { About } from "../pages/About";
-import { Projects } from "../pages/Project";
+import { LogoIcon } from "../elements/Icons";
+import { Link } from "react-router-dom";
 
 interface RouteProps {
-  href: string;
   label: string;
   to: string;
 }
 
 const routeList: RouteProps[] = [
   {
-    href: "about",
     label: "About",
     to: "/about",
   },
   {
-    href: "projects",
     label: "Projects",
     to: "/projects",
   },
   {
-    href: "experiences",
     label: "Experiences",
     to: "/experiences",
   },
   {
-    href: "articles",
     label: "Articles",
     to: "/articles",
   },
@@ -48,10 +39,10 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <a rel="noreferrer noopener" href="/" className="ml-2 font-bold text-xl flex">
+            <Link rel="noreferrer noopener" to="/" className="ml-2 font-bold text-xl flex">
               <LogoIcon />
               Galih-Portfolio
-            </a>
+            </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
@@ -77,7 +68,7 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/Galih17421010"
+                    href="https://www.linkedin.com/in/galihagussaputra"
                     target="_blank"
                     className={`w-[110px] border ${buttonVariants({
                       variant: "secondary",
@@ -107,7 +98,7 @@ export const Navbar = () => {
             ))}
           </nav>
           <div className="hidden md:flex gap-2">
-            <a rel="noreferrer noopener" href="https://github.com/Galih17421010" target="_blank" className={`border ${buttonVariants({ variant: "secondary" })}`}>
+            <a rel="noreferrer noopener" href="https://www.linkedin.com/in/galihagussaputra" target="_blank" className={`border ${buttonVariants({ variant: "secondary" })}`}>
               <RocketIcon className="mr-2 w-5 h-5" />
               Contact
             </a>
