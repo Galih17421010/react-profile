@@ -3,31 +3,41 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/compon
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { RocketIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "../ui/button";
-import { Link, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "../Icons";
+import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
+import { Link, Route } from "react-router-dom";
+import { Home } from "../pages/Home";
+import { About } from "../pages/About";
+import { Projects } from "../pages/Project";
 
 interface RouteProps {
   href: string;
   label: string;
+  to: string;
 }
 
 const routeList: RouteProps[] = [
   {
-    href: "/about",
+    href: "about",
     label: "About",
+    to: "/about",
   },
   {
-    href: "/projects",
+    href: "projects",
     label: "Projects",
+    to: "/projects",
   },
   {
-    href: "/experience",
-    label: "Experience",
+    href: "experiences",
+    label: "Experiences",
+    to: "/experiences",
   },
   {
-    href: "/articles",
+    href: "articles",
     label: "Articles",
+    to: "/articles",
   },
 ];
 
@@ -60,10 +70,10 @@ export const Navbar = () => {
                   <SheetTitle className="font-bold text-xl">Galih - Portfolio</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                  {routeList.map(({ href, label }: RouteProps) => (
-                    <a rel="noreferrer noopener" key={label} href={href} onClick={() => setIsOpen(false)} className={buttonVariants({ variant: "ghost" })}>
+                  {routeList.map(({ label, to }: RouteProps) => (
+                    <Link rel="noreferrer noopener" key={label} to={to} onClick={() => setIsOpen(false)} className={buttonVariants({ variant: "ghost" })}>
                       {label}
-                    </a>
+                    </Link>
                   ))}
                   <a
                     rel="noreferrer noopener"
@@ -84,19 +94,18 @@ export const Navbar = () => {
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
-              <a
+              <Link
                 rel="noreferrer noopener"
-                href={route.href}
+                to={route.to}
                 key={i}
                 className={`text-[17px] ${buttonVariants({
                   variant: "ghost",
                 })}`}
               >
                 {route.label}
-              </a>
+              </Link>
             ))}
           </nav>
-
           <div className="hidden md:flex gap-2">
             <a rel="noreferrer noopener" href="https://github.com/Galih17421010" target="_blank" className={`border ${buttonVariants({ variant: "secondary" })}`}>
               <RocketIcon className="mr-2 w-5 h-5" />

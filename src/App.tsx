@@ -1,4 +1,8 @@
-import { About } from "./components/About";
+import { Home } from "./components/pages/Home";
+import { About } from "./components/pages/About";
+import { Projects } from "./components/pages/Project";
+import { Experiences } from "./components/pages/Experience";
+import { Articles } from "./components/pages/Article";
 import { Cta } from "./components/Cta";
 import { FAQ } from "./components/FAQ";
 import { Features } from "./components/Features";
@@ -20,17 +24,17 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Navbar />
-      {/* <Router>
+      <Router>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Hero />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Features />} />
-          <Route path="/experience" element={<Services />} />
-          <Route path="/articles" element={<Testimonials />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/experiences" element={<Experiences />} />
+          <Route path="/articles" element={<Articles />} />
         </Routes>
-      </Router> */}
-      <Hero />
+      </Router>
+      {/* <Hero />
       <Sponsors />
       <About />
       <HowItWorks />
@@ -41,7 +45,7 @@ function App() {
       <Team />
       <Pricing />
       <Newsletter />
-      <FAQ />
+      <FAQ /> */}
       <Footer />
       <ScrollToTop />
     </>
