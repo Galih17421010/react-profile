@@ -6,7 +6,7 @@ import { buttonVariants } from "../ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "../elements/Icons";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface RouteProps {
   label: string;
