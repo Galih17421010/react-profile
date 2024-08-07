@@ -2,6 +2,7 @@ import { Home } from "./components/pages/Home";
 import { About } from "./components/pages/About";
 import { Projects } from "./components/pages/Project";
 import { Experiences } from "./components/pages/Experience";
+import { Resume } from "./components/pages/Resume";
 import { Articles } from "./components/pages/Article";
 import { Footer } from "./components/elements/Footer";
 import { Navbar } from "./components/elements/Navbar";
@@ -32,6 +33,10 @@ const routeList: RouteProps[] = [
     path: "/experiences",
   },
   {
+    element: <Resume />,
+    path: "/resume",
+  },
+  {
     element: <Articles />,
     path: "/articles",
   },
@@ -46,11 +51,6 @@ function App() {
           {routeList.map((route: RouteProps, i) => (
             <Route path={route.path} element={route.element} key={i} />
           ))}
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/experiences" element={<Experiences />} />
-          <Route path="/articles" element={<Articles />} /> */}
         </Routes>
       </Router>
       <Footer />

@@ -1,6 +1,6 @@
-import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
-import { HeroCards } from "./elements/HeroCards";
+import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
+import { HeroCards } from "../elements/HeroCards";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const Hero = () => {

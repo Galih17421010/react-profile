@@ -27,6 +27,10 @@ const routeList: RouteProps[] = [
     to: "/experiences",
   },
   {
+    label: "Resume",
+    to: "/resume",
+  },
+  {
     label: "Articles",
     to: "/articles",
   },
