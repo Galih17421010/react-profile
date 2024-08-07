@@ -18,7 +18,6 @@ export const About = () => {
                 consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
-
             <Statistics />
           </div>
         </div>

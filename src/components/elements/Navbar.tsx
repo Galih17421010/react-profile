@@ -6,7 +6,7 @@ import { buttonVariants } from "../ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "../elements/Icons";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 interface RouteProps {
   label: string;
@@ -39,10 +39,10 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <Link rel="noreferrer noopener" to="/" className="ml-2 font-bold text-xl flex">
+            <NavLink rel="noreferrer noopener" to="/" className={({ isActive }) => (isActive ? "ml-2 font-bold text-xl flex text-primary" : "ml-2 font-bold text-xl flex")}>
               <LogoIcon />
               Galih-Portfolio
-            </Link>
+            </NavLink>
           </NavigationMenuItem>
 
           {/* mobile */}
@@ -58,13 +58,17 @@ export const Navbar = () => {
 
               <SheetContent side={"left"}>
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">Galih - Portfolio</SheetTitle>
+                  <SheetTitle className="font-bold text-xl">
+                    <NavLink to="/" className={({ isActive }) => (isActive ? "text-primary" : "")}>
+                      Galih - Portfolio
+                    </NavLink>
+                  </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
                   {routeList.map(({ label, to }: RouteProps) => (
-                    <Link rel="noreferrer noopener" key={label} to={to} onClick={() => setIsOpen(false)} className={buttonVariants({ variant: "ghost" })}>
+                    <NavLink rel="noreferrer noopener" key={label} to={to} onClick={() => setIsOpen(false)} className={({ isActive }) => (isActive ? buttonVariants({ variant: "link" }) : buttonVariants({ variant: "ghost" }))}>
                       {label}
-                    </Link>
+                    </NavLink>
                   ))}
                   <a
                     rel="noreferrer noopener"
@@ -85,16 +89,22 @@ export const Navbar = () => {
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
-              <Link
+              <NavLink
                 rel="noreferrer noopener"
                 to={route.to}
                 key={i}
-                className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}
+                className={({ isActive }) =>
+                  isActive
+                    ? buttonVariants({
+                        variant: "link",
+                      })
+                    : buttonVariants({
+                        variant: "ghost",
+                      })
+                }
               >
                 {route.label}
-              </Link>
+              </NavLink>
             ))}
           </nav>
           <div className="hidden md:flex gap-2">
