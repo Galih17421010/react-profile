@@ -1,6 +1,7 @@
 import { Home } from "./components/pages/Home";
 import { About } from "./components/pages/About";
 import { Projects } from "./components/pages/Project";
+import { DetailProject } from "./components/pages/DetailProject";
 import { Experiences } from "./components/pages/Experience";
 import { Resume } from "./components/pages/Resume";
 import { Articles } from "./components/pages/Article";
@@ -27,6 +28,10 @@ const routeList: RouteProps[] = [
   {
     element: <Projects />,
     path: "/projects",
+  },
+  {
+    element: <DetailProject />,
+    path: "/projects/:slug",
   },
   {
     element: <Experiences />,
