@@ -5,6 +5,7 @@ import { DetailProject } from "./components/pages/DetailProject";
 import { Experiences } from "./components/pages/Experience";
 import { Resume } from "./components/pages/Resume";
 import { Articles } from "./components/pages/Article";
+import { NotFound } from "./components/pages/404";
 import { Footer } from "./components/elements/Footer";
 import { Navbar } from "./components/elements/Navbar";
 import { ScrollToTop } from "./components/elements/ScrollToTop";
@@ -44,6 +45,10 @@ const routeList: RouteProps[] = [
   {
     element: <Articles />,
     path: "/articles",
+  },
+  {
+    element: <NotFound />,
+    path: "*",
   },
 ];
 
