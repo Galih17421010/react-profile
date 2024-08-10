@@ -1,4 +1,4 @@
-import { Project } from "../type/project";
+import { Project } from "../type/typeproject";
 
 const projects: Project[] = [
   {
@@ -19,7 +19,6 @@ const projects: Project[] = [
     technologies: ["Node.js", "Express", "MongoDB"],
     image: "/images/project-two.png",
   },
-  // Add more projects as needed
 ];
 
 export default projects;
