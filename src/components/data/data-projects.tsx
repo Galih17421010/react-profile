@@ -1,4 +1,6 @@
 import { Project } from "../type/typeproject";
+import image1 from "@/assets/growth.png";
+import image2 from "@/assets/reflecting.png";
 
 const projects: Project[] = [
   {
@@ -8,7 +10,8 @@ const projects: Project[] = [
     date: "July 25, 2024",
     description: "This is the description of the first project...",
     technologies: ["React", "TypeScript", "CSS"],
-    image: "/images/project-one.png",
+    image: image1,
+    url: "https://github.com",
   },
   {
     id: 2,
@@ -17,7 +20,8 @@ const projects: Project[] = [
     date: "August 1, 2024",
     description: "This is the description of the second project...",
     technologies: ["Node.js", "Express", "MongoDB"],
-    image: "/images/project-two.png",
+    image: image2,
+    url: "https://github.com",
   },
 ];
 

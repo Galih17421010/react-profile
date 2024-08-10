@@ -6,4 +6,5 @@ export interface Project {
   description: string;
   technologies: string[];
   image: string;
+  url: string;
 }
