@@ -38,12 +38,14 @@ export const Projects = () => {
             </CardHeader>
 
             <CardContent>
-              <p>{description}</p>
-              {date}
+              <p className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto">{description}</p>
+              <p className="text-gray-500 text-right text-sm py-3">
+                <time>{date}</time>
+              </p>
             </CardContent>
 
             <CardFooter className="justify-center">
-              <Badge variant="secondary" className="text-sm text-primary">
+              <Badge variant="secondary" className="text-xs text-primary">
                 {technologies}
               </Badge>
               <div>

@@ -20,7 +20,8 @@ const DataProjects: Project[] = [
     slug: "project-one",
     date: "July 25, 2024",
     description: "This is the description of the first project...",
-    detail: "",
+    detail:
+      "Project background info goes here. Fusce laoreet ornare risus, et sollicitudin turpis viverra nec. Proin eu lacinia ipsum. Curabitur porta a mi sit amet iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque elementum tellus vel elit pharetra, et venenatis tortor condimentum.",
     technologies: ["React", "TypeScript", "CSS"],
     image: image1,
     url: "https://github.com",
@@ -67,6 +68,18 @@ const DataProjects: Project[] = [
     detail: "",
     technologies: ["Node.js", "Express", "MongoDB"],
     image: image2,
+    url: "https://github.com",
+  },
+  {
+    id: 6,
+    title: "Project Six",
+    slug: "project-six",
+    date: "July 25, 2024",
+    description: "This is the description of the first project...",
+    detail:
+      "Project background info goes here. Fusce laoreet ornare risus, et sollicitudin turpis viverra nec. Proin eu lacinia ipsum. Curabitur porta a mi sit amet iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque elementum tellus vel elit pharetra, et venenatis tortor condimentum.",
+    technologies: ["React", "TypeScript", "CSS"],
+    image: image1,
     url: "https://github.com",
   },
 ];
