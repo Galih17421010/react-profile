@@ -1,14 +1,25 @@
-export const DetailProject = () => {
-  return (
-    <section id="newsletter">
-      <hr className="w-11/12 mx-auto" />
+import React from "react";
+import { useParams } from "react-router-dom";
+import { NotFound } from "./404";
+import DataProjects from "../data/data-projects";
 
-      <div className="container py-24 sm:py-10">
-        <h3 className="text-center text-4xl md:text-5xl font-bold">
-          Join Our Daily <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">Newsletter</span>
-        </h3>
-        <p className="text-xl text-muted-foreground text-center mt-4 mb-8">Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-    </section>
+const projects = DataProjects;
+
+const DetailProject: React.FC = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return <NotFound />;
+  }
+
+  return (
+    <div>
+      <img src={project.image} alt="About feature" className="w-[100px] lg:w-[200px] mx-auto" />
+      <h1>{project.title}</h1>
+      <p>{project.description}</p>
+      <p>{project.date}</p>
+    </div>
   );
 };
+export default DetailProject;
