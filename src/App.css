@@ -63,11 +63,4 @@
     left: 0;
     right: 0;
   }
-  .breadcrumb {
-    /* position: absolute; */
-    left: 2rem;
-    top: 1.5rem;
-    font-size: 0.875rem;
-    color: #ffffff;
-  }
 }
