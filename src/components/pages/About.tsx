@@ -11,11 +11,12 @@ export const About = () => {
             <div className="pb-6">
               <h2 className="text-3xl md:text-4xl font-bold">
                 <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">About </span>
-                Company
+                Me
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Hello! I'm Galih, a programmer with a passion for solving problems through code. With 2+ years of experience and a Bachelor's degree in Informatics Engineering, I thrive on transforming ideas into practical and innovative
+                digital solutions. My journey in the tech world has been fueled by a curiosity to learn, adapt, and grow. This website is a reflection of my commitment to continuous improvement and professional development. When I'm not
+                coding, you'll likely find me exploring new technologies or working on personal projects that push the boundaries of my skills.
               </p>
             </div>
             <Statistics />
